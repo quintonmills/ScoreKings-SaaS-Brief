@@ -15,7 +15,7 @@
       <p class="text-xs uppercase tracking-widest font-bold text-slate-400 mb-2">Confidential Technical Brief</p>
       <h1 class="text-5xl font-black text-slate-900 tracking-tight mb-4">ScoreKings</h1>
       <p class="text-xl text-slate-600 font-normal leading-relaxed">
-        Architecting an automated, real-time sports data ingestion and dynamic media rendering ecosystem for regional athletic leagues.
+        Architecting an automated, real-time sports data ingestion and generative AI media pipeline for regional athletic leagues.
       </p>
       <div class="h-px bg-slate-300 w-full mt-8"></div>
     </header>
@@ -24,7 +24,7 @@
     <section class="mb-14">
       <h2 class="text-xs uppercase tracking-widest font-bold text-slate-400 mb-4">01. Executive Overview</h2>
       <p class="text-slate-700 text-lg leading-relaxed">
-        ScoreKings was conceived to bridge the gap between amateur sports event tracking and professional digital media distribution. By pairing a touch-optimized courtside ingestion client with an automated server-side canvas engine, the platform transforms raw box scores into instant, high-impact social media assets and structured league analytics.
+        ScoreKings was conceived to bridge the gap between amateur sports event tracking and professional digital media distribution. By pairing a touch-optimized courtside ingestion client with a Node.js backend powered by OpenAI API image generation, the platform transforms raw box scores into custom, high-impact social media assets and structured league analytics.
       </p>
     </section>
 
@@ -32,13 +32,13 @@
     <section class="mb-14">
       <h2 class="text-xs uppercase tracking-widest font-bold text-slate-400 mb-4">02. Technical Architecture</h2>
       <p class="text-slate-700 text-base leading-relaxed mb-6">
-        The system utilizes an <strong class="text-slate-900 font-semibold">event-driven data-to-media pipeline</strong>. Live courtside game events are captured locally with sub-second touch response, aggregated into structured game payloads, and transmitted via a RESTful API to trigger real-time image compositing.
+        The system utilizes an <strong class="text-slate-900 font-semibold">event-driven data-to-media pipeline</strong>. Live courtside game events are captured locally with sub-second touch response, aggregated into structured game payloads, and transmitted via a RESTful API to trigger generative AI visual creation.
       </p>
 
       <!-- Architecture Flow Diagram Card -->
       <div class="bg-slate-100 border border-slate-200/80 rounded-lg p-6 text-center mb-8">
         <p class="text-sm font-mono text-slate-500 italic">
-          [High-Level Architecture: React PWA Client &rarr; Express API &rarr; @napi-rs/canvas Engine &rarr; MongoDB Atlas &rarr; Static CDN]
+          [High-Level Architecture: React PWA Client &rarr; Express API &rarr; OpenAI API Service &rarr; MongoDB Atlas &rarr; Static CDN]
         </p>
       </div>
 
@@ -51,8 +51,8 @@
           <ul class="space-y-2 text-sm font-mono text-slate-700">
             <li>&rarr; React (Vite) / Tailwind CSS</li>
             <li>&rarr; Node.js & Express</li>
+            <li>&rarr; OpenAI Image API Integration</li>
             <li>&rarr; MongoDB (Mongoose)</li>
-            <li>&rarr; @napi-rs/canvas</li>
             <li>&rarr; Progressive Web App (PWA)</li>
           </ul>
         </div>
@@ -62,7 +62,7 @@
           <h3 class="text-lg font-bold text-slate-900 mb-4">Key Capabilities</h3>
           <ul class="space-y-2 text-sm text-slate-700">
             <li>&bull; Touch-optimized courtside stat logger UI.</li>
-            <li>&bull; Dynamic server-side 1080&times;1350 JPEG rendering.</li>
+            <li>&bull; Generative AI-driven dynamic stat card rendering.</li>
             <li>&bull; Immediate QR-code & static asset delivery post-game.</li>
             <li>&bull; Verified player & league leaderboard aggregation.</li>
           </ul>
@@ -78,9 +78,9 @@
       <div class="space-y-8">
         
         <div class="border-l-2 border-slate-900 pl-6 py-1">
-          <h3 class="text-xl font-bold text-slate-900 mb-2">Server-Side Native Canvas over Client-Side Generation</h3>
+          <h3 class="text-xl font-bold text-slate-900 mb-2">Generative AI Image Pipeline over Static Canvas Layouts</h3>
           <p class="text-slate-600 text-base leading-relaxed">
-            Selected <code class="bg-slate-200/60 text-slate-800 px-1.5 py-0.5 rounded text-sm font-mono">@napi-rs/canvas</code> on the Node.js backend rather than client-side HTML5 canvas execution. This ensures deterministic visual rendering across all player devices, removes heavy rendering overhead from tablet browsers courtside, and keeps brand graphics standardized.
+            Integrated the <code class="bg-slate-200/60 text-slate-800 px-1.5 py-0.5 rounded text-sm font-mono">OpenAI API</code> on the Node.js backend to dynamically generate customized visual stat cards. This decouples graphic design from rigid, hardcoded templates, allowing flexible, high-fidelity creative outputs tailored directly to player performance metrics.
           </p>
         </div>
 
@@ -98,7 +98,7 @@
     <section class="mb-16">
       <h2 class="text-xs uppercase tracking-widest font-bold text-slate-400 mb-4">04. Market Context</h2>
       <p class="text-slate-700 text-base leading-relaxed">
-        By adapting the real-time telemetry and media automation principles found in professional sports analytics platforms, ScoreKings provides a scalable SaaS-and-media model for mid-market amateur leagues, turning live game data into immediate engagement and monetization.
+        By adapting real-time telemetry and generative AI media creation principles, ScoreKings provides a scalable SaaS-and-media model for mid-market amateur leagues, turning live game data into immediate engagement and monetization.
       </p>
     </section>
 
