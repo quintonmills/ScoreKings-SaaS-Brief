@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ScoreKings - Technical Brief</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans max-w-4xl mx-auto px-6 py-12">
+
+  <header class="border-b pb-6 mb-8">
+    <p class="text-xs uppercase tracking-widest font-bold text-slate-400 mb-1">Confidential Technical Brief</p>
+    <h1 class="text-4xl font-extrabold text-slate-900 tracking-tight">ScoreKings</h1>
+    <p class="text-lg text-slate-600 mt-2">Architecting an automated, real-time sports data ingestion and dynamic media rendering ecosystem for regional athletic leagues.</p>
+  </header>
+
+  <section class="mb-10">
+    <h2 class="text-xs uppercase tracking-wider font-bold text-slate-500 mb-3">01. Executive Overview</h2>
+    <p class="text-slate-700 leading-relaxed">ScoreKings was conceived to bridge the gap between amateur sports event tracking and professional digital media distribution. By pairing a touch-optimized courtside ingestion client with an automated server-side canvas engine, the platform transforms raw box scores into instant, high-impact social media assets and structured league analytics.</p>
+  </section>
+
+  <section class="mb-10">
+    <h2 class="text-xs uppercase tracking-wider font-bold text-slate-500 mb-3">02. Technical Architecture</h2>
+    <p class="text-slate-700 leading-relaxed mb-4">The system utilizes an <strong>event-driven data-to-media pipeline</strong>. Live courtside game events are captured locally with sub-second touch response, aggregated into structured game payloads, and transmitted via a RESTful API to trigger real-time image compositing.</p>
+    
+    <div class="bg-slate-900 text-slate-200 p-4 rounded-lg text-sm font-mono mb-6">
+      React PWA Client &rarr; Express API &rarr; @napi-rs/canvas Engine &rarr; MongoDB Atlas &rarr; Static CDN
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-4">
+      <div class="bg-white p-5 rounded-lg border border-slate-200 shadow-sm">
+        <h3 class="font-bold text-slate-900 mb-2">Core Stack</h3>
+        <ul class="text-sm space-y-1 text-slate-600 font-mono">
+          <li>&rarr; React (Vite) / Tailwind</li>
+          <li>&rarr; Node.js & Express</li>
+          <li>&rarr; MongoDB (Mongoose)</li>
+          <li>&rarr; @napi-rs/canvas</li>
+        </ul>
+      </div>
+      <div class="bg-white p-5 rounded-lg border border-slate-200 shadow-sm">
+        <h3 class="font-bold text-slate-900 mb-2">Key Capabilities</h3>
+        <ul class="text-sm space-y-1 text-slate-600">
+          <li>&bull; Touch-optimized courtside stat logger UI</li>
+          <li>&bull; Dynamic 1080x1350 JPEG rendering engine</li>
+          <li>&bull; Immediate QR code asset delivery</li>
+          <li>&bull; League leaderboard aggregation</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="mb-10">
+    <h2 class="text-xs uppercase tracking-wider font-bold text-slate-500 mb-3">03. Strategic Trade-offs</h2>
+    <div class="space-y-4">
+      <div class="border-l-4 border-slate-900 pl-4 py-1">
+        <h3 class="font-bold text-slate-900">Server-Side Native Canvas over Client-Side Generation</h3>
+        <p class="text-sm text-slate-600 mt-1">Selected <code>@napi-rs/canvas</code> on the Node.js backend rather than client-side HTML5 canvas execution to guarantee deterministic visual rendering across devices and eliminate tablet browser overhead courtside.</p>
+      </div>
+      <div class="border-l-4 border-slate-900 pl-4 py-1">
+        <h3 class="font-bold text-slate-900">PWA Web Client over Native Mobile Build</h3>
+        <p class="text-sm text-slate-600 mt-1">Prioritized a Progressive Web App architecture for the MVP stage to bypass app store review friction and enable instant hot-reloading for live field updates while retaining full touch responsiveness.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer class="border-t pt-6 text-xs text-slate-400 text-center">
+    &copy; 2026 Quinton Mills &bull; Founding Engineer &bull; ScoreKings Startup Venture
+  </footer>
+
+</body>
+</html>
